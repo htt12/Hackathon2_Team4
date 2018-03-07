@@ -17,7 +17,28 @@ header {
     text-align: center;
 }
 
+.resultDiv{
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+    color: black;
+    background-color: white;
+    width: 50%;
+    height: 10vh;
+}
+
 .search-container{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    margin: auto;
+    grid-column: 1;
+    grid-row: 2/3;
+
+}
+
+.results-container{
     position: absolute;
     width: 100%;
     text-align: center;
