@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 $(document).ready(intializeApp);
 console.log( 'have loaded', intializeApp);
 
-// var FlickrQuery = [];
 
 
 
@@ -53,8 +52,6 @@ function rendorFlickrData() {
 
 }
 
-		
-=======
 $(document).ready(initializeApp)
 var firstGame = null;
 
@@ -65,4 +62,4 @@ function initializeApp(){
 function applyClickHandlers(){
     $("#search").on("click", wikiApiCall);
 }
->>>>>>> e4adba0af78b506083b2ce40cf150e7d727c2d1b
+
