@@ -1,22 +1,20 @@
-<<<<<<< HEAD
-$(document).ready(intializeApp);
-console.log( 'have loaded', intializeApp);
-
-// var FlickrQuery = [];
 
 
+$(document).ready(initializeApp)
 
-function intializeApp(){
-	console.log('button was clicked', flickrGetData);
-	attachButtonHandler();
+
+function initializeApp(){
+    applyClickHandlers();
 }
 
-function attachButtonHandler() {
-console.log('i was clicked', attachButtonHandler);
-$('input').on('click', event);
-
-
+function applyClickHandlers(){
+    $("#search").on("click", wikiApiCall);
 }
+
+
+
+
+
 
 function flickrGetData() {
 	var dataObject = {
@@ -52,17 +50,3 @@ function rendorFlickrData() {
     }
 
 }
-
-		
-=======
-$(document).ready(initializeApp)
-var firstGame = null;
-
-function initializeApp(){
-    applyClickHandlers();
-}
-
-function applyClickHandlers(){
-    $("#search").on("click", wikiApiCall);
-}
->>>>>>> e4adba0af78b506083b2ce40cf150e7d727c2d1b
