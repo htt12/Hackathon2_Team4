@@ -8,7 +8,6 @@ body {
 }
 
 
-
 header {
     width: 100%;
     height: 100%;
@@ -20,10 +19,16 @@ header {
 }
 
 .content{
+    opacity: 1;
     display: grid;
     grid-template-columns:  50% 50%;
     grid-template-rows: 33.33% 33.33% 33.33%;
 }
+
+.hidden{
+    opacity: 0;
+}
+
 
 .resultDiv{
     margin-top: 2vh;
@@ -39,8 +44,25 @@ header {
 }
 
 .bigTextBox{
-    background-color: grey;
+    background-color: rgb(24, 24, 24);
     text-align: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+    font-family: 'Bowlby One SC', cursive;
+    
+}
+
+.bigTitle{
+    grid-column: 1;
+    grid-row: 1/2;
+    font-size: 20vh;
+    
+}
+
+.littleTitle{
+    grid-column: 1;
+    grid-row: 2/3;
+    font-size: 4vh;
 }
 
 .what{
@@ -70,12 +92,21 @@ header {
 }
 
 .results-container{
+    z-index: 05;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
     position: absolute;
-    width: 100%;
+    width: 50%;
     text-align: center;
-    margin: auto;
     grid-column: 1;
     grid-row: 2/3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 
 }
 
@@ -103,8 +134,8 @@ iframe{
 }
 
 .youtube-video{
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 1/2;
+    grid-row: 2/3;
     padding: 10% auto;
     width: 100%;
     height: 100%;
@@ -128,18 +159,18 @@ iframe{
 
 .google-map{
     grid-column: 2/3;
-    grid-row: 1;
+    grid-row: 3/4;
 }
 
 
 .wiki-content{
-    grid-column: 1/2;
-    grid-row: 2/3;
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
 
 .flickr-images{
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 1/2;
 }
 
 #theImg{
