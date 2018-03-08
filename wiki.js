@@ -1,6 +1,6 @@
 function wikiApiCall(){
-    var searchTerm = $("#searchTerm").val();
-    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+searchTerm+"&format=json&callback=?";
+    // var searchTerm = $("#searchTerm").val();
+    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=skydiving&format=json&callback=?";
     $.ajax( {
         url: url,
         dataType: 'json',
@@ -9,7 +9,6 @@ function wikiApiCall(){
         success: function(data) {
         console.log('success', data)
         var wikiResults = data[1];
-        console.log(searchTerm);
         renderResultsOnDom(wikiResults);
         }
 } );
@@ -28,11 +27,3 @@ function renderResultsOnDom(wikiResults){
     }
    
 };
-
-function handleResultClick(){
-    var searchTerm = $(this).text();
-    flickrGetData(searchTerm);
-    youtubeApiCall(searchTerm);
-    // getSearchInfo(searchTerm);
-
-}
