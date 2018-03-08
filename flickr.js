@@ -1,11 +1,12 @@
-function flickrGetData() {
+function flickrGetData(searchTerm) {
+	console.log(searchTerm);
 	var dataObject = {
 			API_Key: 'c7e4ee0c9678f51208abad8748d3d47d',
 			secret: 'fd33ae9aad5ae660'
 			}
 
 			$.ajax({
-				url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=de5b41195f5a819dbb4c302754acc09e&in_gallery=skydiving&per_page=25&format=json&nojsoncallback=1&auth_token=72157693478317314-d23e0f5d420d477f&api_sig=9d14fd4ae7a5dc9df24f7e634b20663d',
+				url: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=30430025f066499dcebfbb48f6a50fc4&tags="+searchTerm+"&per_page=25&format=json&nojsoncallback=1",
 				dataType: 'json',
 				// method: 'get',
 				success: function(response) {
@@ -13,14 +14,9 @@ function flickrGetData() {
 					console.log(response);
 					var imageData = response;
 					var imageArray = imageData.photos.photo;
-					constructImgUrls(imageArray)
+					constructImgUrls(imageArray);
 					console.log(imageArray)
-					// console.log(response.data)
-					
 				},
-				 error: function(response) {
-				 	console.log('err- ', response);
-				}
 			})
 }
 
@@ -32,9 +28,13 @@ function constructImgUrls(imageArray){
 		var server_id = imageArray[i].server;
 		var url = "https://farm"+farm+".staticflickr.com/"+server_id+"/"+id+"_"+secret+"_c.jpg"
 		console.log(url);
+		$(".flickr-images").prepend($('<img>',{id:'theImg',src: url}))
+		$(".results-container").prepend($('<img>',{id:'theImg',src: url}))
+
 	}
 
 }
+
 
 
 // https://farm5.staticflickr.com/4784/25809291047_74492fac4d_m.jpg
@@ -55,3 +55,4 @@ function constructImgUrls(imageArray){
 // Photos may be replaced in async mode, for applications that don't want to wait around for an upload to complete, leaving a socket connection open the whole time. Processing photos asynchronously is recommended. Please consult the documentation for details. -->
 // <!-- Asynchronous Uploading
 // Flickr can process photos in async mode, for applications that need to post multiple photos and don't want to wait around for each one to complete, leaving a socket connection open the whole time.
+// Removed token and auth keys to get access to dynamically changing flickr api url

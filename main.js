@@ -7,9 +7,9 @@ function initializeApp(){
 
 function applyClickHandlers(){
     $("#search").on("click", wikiApiCall);
-    // $("#search").on("click", youtubeApiCall);
-    // $("#search").on("click", flickrGetData);
+    $("#search").on("click", youtubeApiCall);
 }
+
 
 
 
