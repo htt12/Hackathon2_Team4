@@ -99,3 +99,14 @@ iframe{
     grid-column: 2/3;
     grid-row: 2/3;
 }
+
+.search-container-test{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    top: 20%;
+    grid-column: 1;
+    grid-row: 1;
+
+}
