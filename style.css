@@ -95,6 +95,11 @@ header {
 
 }
 
+.mapFrame{
+    text-align: center;
+    height: 100%;
+}
+
 .results-container{
     z-index: 05;
     display: flex;
@@ -174,11 +179,14 @@ iframe{
     grid-column: 2/3;
     grid-row: 1/2;
     overflow: hidden;
+    
 }
 
 .wiki-description{
+    font-size: 2vh;
     grid-column: 1;
     grid-row: 3/4;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .wiki-title{
@@ -186,6 +194,7 @@ iframe{
     text-align: center;
     grid-column: 1;
     grid-row: 1/2;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .flickr-images{

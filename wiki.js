@@ -16,7 +16,7 @@ function wikiApiCall(searchTerm){
 
 }
 
-var activityArray = ['Travel', 'Surf', 'Cook', 'Cliff jumping','Shark diving', 'Volcano Trekking', 'Cave diving','Ice Marathon',' Kayaking with whales','Mountaineering',' Bungee jupming',' Portledging',' Spelunking',' Mountain bike',' Sailing',' Sandboarding',' Learn a new language',' Wine tasting',' Sing',' Running of the Bulls',' White water rafting',' Wingsuit flight',' Ice swimming',' Dog sled racing',' Ice climb',' Snow mobiling',' Backpack Europe',' Skydiving', 'Scuba Diving'];
+var activityArray = ['Traveling', 'Snow Boarding', 'Surfing', 'Cooking', 'Cliff Jumping','Shark Diving', 'Hiking', 'Cave Diving','Ice Skating',' Kayaking','Mountaineering',' Bungee Jupming',' Portledging',' Spelunking',' Mountain Biking',' Sailing',' Sandboarding','Learning New Language',' Wine Tasting',' Singing',' Running of the Bulls',' White water rafting',' Wingsuit flight','Swimming',' Dog Sledding',' Ice Climbing','Rock Climbing',' Backpacking',' Skydiving', 'Scuba Diving'];
 
 function renderResultsOnDom(){
     for(var i = 0; i < activityArray.length; i++){
