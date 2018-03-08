@@ -15,15 +15,19 @@ function wikiApiCall(){
 
 }
 
-var activityArray = ['Travel', 'Surf', 'Cook', 'Cliff jumping','Shark diving', 'Volcano Trekking', 'Cave diving','Ice Marathon',' Kayaking with whales','Mountaineering',' Bungee jupming',' Portledging',' Spelunking',' Mountain bike',' Sailing',' Sandboarding',' Learn a new language',' Wine tasting',' Sing',' Running of the Bulls',' White water rafting',' Wingsuit flight',' Ice swimming',' Dog sled racing',' Ice climb',' Snow mobiling',' Backpack Europe',' Skydiving', 'Scuba Diving'];
+var activityArray = ['Travel', 'Surf', 'Cook', 'Cliff Jumping','Shark Diving', 'Volcano Trekking', 'Cave Diving','Ice Marathon',' Kayaking With Whales','Mountaineering',' Bungee jupming',' Portledging',' Spelunking',' Mountain bike',' Sailing',' Sandboarding',' Learn a New Language',' Wine Tasting',' Sing',' Running of the Bulls',' White Water Rafting',' Wingsuit Flight',' Ice Swimming',' Dog Sled Racing',' Ice Climb',' Snow Mobiling',' Backpack Europe',' Skydiving', 'Scuba Diving'];
 
 function renderResultsOnDom(){
     for(var i = 0; i < activityArray.length; i++){
         // var image = getImageFromWiki(wikiResults[i]);
         // console.log(image);
-        var $resultDiv = $("<div>").text(activityArray[i]).addClass("resultDiv").on("click", handleResultClick);
-        $(".results-container").append($resultDiv);
+        // var $resultDiv = $("<div>").text(activityArray[i]).addClass("resultDiv").on("click", handleResultClick);
+        // $(".results-container").append($resultDiv);
         
+        var $resultDiv = $("<div>").addClass("resultDiv");
+        var $titleBar = $("<div>").text(activityArray[i]).addClass("titleBar").on("click", handleResultClick);
+        $($resultDiv).append($titleBar);
+        $(".results-container").append($resultDiv);
+       
     }
-   
 };
