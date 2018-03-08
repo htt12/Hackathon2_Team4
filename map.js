@@ -11,6 +11,7 @@ function searchButtonClick(){
 
 
 function getSearchInfo(searchTerm){
+    var searchTerm = searchTerm + " places";
   var url = "https://www.google.com/maps/embed/v1/search?q=" + searchTerm + "&key=AIzaSyA2LQkpDCGy7IB420XJ9uposdqKkKxINH4";
              $("iframe").attr("src", url);
 
