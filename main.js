@@ -1,6 +1,8 @@
-
 $(document).ready(initializeApp)
 
+function initializeApp(){
+    applyClickHandlers();
+}
 
 function initializeApp(){
     applyClickHandlers();
@@ -12,11 +14,9 @@ function applyClickHandlers(){
     $("#search").on("click", flickrGetData);
 }
 
-
-
-
-
-
+function applyClickHandlers(){
+    $("#search").on("click", wikiApiCall);
+}
 
 
 
