@@ -9,6 +9,7 @@ function initializeApp(){
 function applyClickHandlers(){
     $("#search").on("click", wikiApiCall);
     $("#search").on("click", youtubeApiCall);
+    $(".pulse").on("click", randomAdventure);
 }
 
 function handleResultClick(){
@@ -23,4 +24,12 @@ function handleResultClick(){
     $( ".content" ).removeClass("hidden");
 }
 
+function randomAdventure() {
+    var searchTerm = activityArray[Math.floor((Math.random()*activityArray.length))];
+    youtubeApiCall(searchTerm);
+    getSearchInfo(searchTerm);
+    wikiApiCall(searchTerm);
+    $( ".results-container" ).fadeOut( 400 );
+    $( ".content" ).removeClass("hidden");
 
+}

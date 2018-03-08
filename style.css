@@ -3,21 +3,24 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10vh 90vh;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     color:white;
     background-size: 100vw;
+    margin: 0px;
+    padding: 0px;
 }
 
 
 header {
+    padding: auto;
     width: 100%;
     height: 100%;
     grid-column: 1;
     grid-row: 1;
-    background-color: none;
-    color: white;
+    background-color: rgb(250, 250, 236);
+    color: rgb(59, 59, 59);
     text-align: center;
-    font-size: 3vw;
+    font-size: 4vw;
     font-family: 'Aldrich', sans-serif;
 }
 
@@ -47,6 +50,7 @@ header {
 }
 
 .bigTextBox{
+    top: 12%;
     background-color: rgb(24, 24, 24);
     text-align: center;
     display: grid;
@@ -62,7 +66,9 @@ header {
     grid-column: 1;
     grid-row: 1/2;
     font-size: 20vh;
-    
+    position: relative;
+    top: 10%;
+    ++++: translateY(10%)
 }
 
 .littleTitle{
@@ -74,7 +80,7 @@ header {
 .what{
     grid-column: 1/2;
     grid-row: 1;
-    background-color: rgb(182, 0, 0);
+    background-color: rgb(235, 63, 66);
 }
 
 .where{
@@ -200,6 +206,7 @@ iframe{
     grid-column: 1;
     grid-row: 3/4;
     font-family: 'Fjalla One', sans-serif;
+    padding: 1vw;
 }
 
 .wiki-title{
@@ -231,3 +238,44 @@ iframe{
     grid-row: 1;
 
 }
+
+.pulse {
+    font-size: 1vw;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    margin: 0;
+    --color: #300ccf;
+    --hover: #6ed1ef;
+  }
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  -webkit-box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+button {
+    background-color: rgb(71, 190, 42);
+    color: white;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+  }
