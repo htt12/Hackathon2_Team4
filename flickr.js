@@ -30,3 +30,18 @@ function rendorFlickrData() {
         }
     }
 }
+
+// Authentication
+// This method requires authentication with 'write' permission.
+
+// For details of how to obtain authentication tokens and how to sign calls, see the authentication api spec. Note that the 'photo' parameter should not be included in the signature. All other POST parameters should be included when generating the signature.
+
+// Arguments
+// photo
+// The file to upload.
+// photo_id
+// The ID of the photo to replace.
+// async (optional)
+// Photos may be replaced in async mode, for applications that don't want to wait around for an upload to complete, leaving a socket connection open the whole time. Processing photos asynchronously is recommended. Please consult the documentation for details. -->
+// <!-- Asynchronous Uploading
+// Flickr can process photos in async mode, for applications that need to post multiple photos and don't want to wait around for each one to complete, leaving a socket connection open the whole time.
