@@ -17,6 +17,12 @@ header {
     text-align: center;
 }
 
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
 .resultDiv{
     display: grid;
     grid-template-columns: 2fr;
@@ -69,5 +75,27 @@ iframe{
     position: relative;
     margin: auto;
     grid-column: 1;
+    grid-row: 2/3;
+}
+
+.youtube-video{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+.google-map{
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+
+.wiki-content{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.flickr-images{
+    grid-column: 2/3;
     grid-row: 2/3;
 }
