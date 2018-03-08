@@ -1,5 +1,8 @@
 $(document).ready(initializeApp)
-var firstGame = null;
+
+function initializeApp(){
+    applyClickHandlers();
+}
 
 function initializeApp(){
     applyClickHandlers();
@@ -7,4 +10,13 @@ function initializeApp(){
 
 function applyClickHandlers(){
     $("#search").on("click", wikiApiCall);
+    $("#search").on("click", youtubeApiCall);
+    $("#search").on("click", flickrGetData);
 }
+
+function applyClickHandlers(){
+    $("#search").on("click", wikiApiCall);
+}
+
+
+
