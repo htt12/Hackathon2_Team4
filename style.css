@@ -6,7 +6,7 @@ body {
     background-color: rgb(102, 102, 102);
     color: white;
 }
-h1 {
+/*h1 {
 	margin: 0;
 }
 
@@ -17,25 +17,18 @@ h1 {
 	left: 40%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+}*/
 
-
-
-<<<<<<< HEAD
-}
-=======
-
-
->>>>>>> 8016a4fc21c6f3f2e602f8aea5174fbfff9498ac
 header {
-    /*width: 100vw;*/
+    width: 100vw;
     height: 100vh;
-    /*grid-column: 1;*/
-    /*grid-row: span;*/
+    grid-column: 1;
+    grid-row: span;
     background-image: url('assets/background.jpg');
     background-position: center;
     background-size: cover;
     color: white;
-    /*text-align: center;*/
+    text-align: center;
 }
 
 .content{

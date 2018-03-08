@@ -8,7 +8,7 @@ function flickrGetData(searchTerm) {
 			$.ajax({
 				url: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=30430025f066499dcebfbb48f6a50fc4&tags="+searchTerm+"&per_page=25&format=json&nojsoncallback=1",
 				dataType: 'json',
-				// method: 'get',
+				method: 'GET',
 				success: function(response) {
 					console.log('Was it a sucess', response);
 					console.log(response);
@@ -34,7 +34,6 @@ function constructImgUrls(imageArray){
 	}
 
 }
-
 
 
 // https://farm5.staticflickr.com/4784/25809291047_74492fac4d_m.jpg
