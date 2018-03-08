@@ -92,8 +92,25 @@ header {
     height: 6vmin;
     border: none;
     font-size: 2vw;
-    border-radius: 5px;  
+    border-radius: 5px;
+    cursor: pointer;  
 }
+
+.searchButton:hover{
+    background-color: #ffffcc;  
+}
+
+input[type=text] {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: #e6e6e6;
+}
+
 
 iframe{
     position: relative;
