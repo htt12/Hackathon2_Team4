@@ -21,13 +21,13 @@ function displayVideo(data){
     var div = $('<div>');
     var videoFrame = $('<iframe></iframe>').attr({
         'src': videoURL,
-        'width': '420',
-        'height': '315',
+        'width': '700',
+        'height': '500',
         'frameborder': '0',
         'allowfullscreen':''
     });
 
     div.append(videoFrame);
-    $('.search-container').append(div);
+    $('.youtube-').append(div);
     console.log(videoURL);
 }
