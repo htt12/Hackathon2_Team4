@@ -3,7 +3,7 @@ $(document).ready(initializeApp)
 
 function initializeApp(){
     applyClickHandlers();
-    wikiApiCall();
+    renderResultsOnDom();
 }
 
 function applyClickHandlers(){
@@ -15,6 +15,8 @@ function handleResultClick(){
     var searchTerm = $(this).text();
     // flickrGetData(searchTerm);
     youtubeApiCall(searchTerm);
+    getSearchInfo(searchTerm);
+    
     // getSearchInfo(searchTerm);
     $( ".results-container" ).fadeOut( 400 );
     $( ".content" ).removeClass("hidden");

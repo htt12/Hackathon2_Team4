@@ -15,13 +15,13 @@ function wikiApiCall(){
 
 }
 
+var activityArray = ['Travel', 'Surf', 'Cook', 'Cliff jumping','Shark diving', 'Volcano Trekking', 'Cave diving','Ice Marathon',' Kayaking with whales','Mountaineering',' Bungee jupming',' Portledging',' Spelunking',' Mountain bike',' Sailing',' Sandboarding',' Learn a new language',' Wine tasting',' Sing',' Running of the Bulls',' White water rafting',' Wingsuit flight',' Ice swimming',' Dog sled racing',' Ice climb',' Snow mobiling',' Backpack Europe',' Skydiving', 'Scuba Diving'];
 
-function renderResultsOnDom(wikiResults){
-    for(var i = 0; i < wikiResults.length; i++){
-        console.log(wikiResults[i]);
+function renderResultsOnDom(){
+    for(var i = 0; i < activityArray.length; i++){
         // var image = getImageFromWiki(wikiResults[i]);
         // console.log(image);
-        var $resultDiv = $("<div>").text(wikiResults[i]).addClass("resultDiv").on("click", handleResultClick);
+        var $resultDiv = $("<div>").text(activityArray[i]).addClass("resultDiv").on("click", handleResultClick);
         $(".results-container").append($resultDiv);
         
     }

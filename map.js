@@ -10,8 +10,7 @@ function searchButtonClick(){
 }
 
 
-function getSearchInfo(input){
-  var searchTerm = $("#searchPhrase").val();
+function getSearchInfo(searchTerm){
   var url = "https://www.google.com/maps/embed/v1/search?q=" + searchTerm + "&key=AIzaSyA2LQkpDCGy7IB420XJ9uposdqKkKxINH4";
              $("iframe").attr("src", url);
 
