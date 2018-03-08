@@ -7,6 +7,8 @@ body {
     color: white;
 }
 
+
+
 header {
     width: 100%;
     height: 100%;
@@ -24,13 +26,16 @@ header {
 }
 
 .resultDiv{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     display: grid;
     grid-template-columns: 2fr;
     grid-template-rows: 1fr;
     color: black;
     background-color: white;
-    width: 50%;
-    height: 10vh;
+    width: 30%;
+    font-size: 4vh;
+    text-align: center;
 }
 
 .search-container{
@@ -48,7 +53,6 @@ header {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 50%;
     margin: auto;
     grid-column: 1;
     grid-row: 2/3;
