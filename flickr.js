@@ -14,12 +14,9 @@ function flickrGetData(searchTerm) {
 					console.log(response);
 					var imageData = response;
 					var imageArray = imageData.photos.photo;
-					constructImgUrls(imageArray)
+					constructImgUrls(imageArray);
 					console.log(imageArray)
 				},
-				 error: function(response) {
-				 	console.log('err- ', response);
-				}
 			})
 }
 
@@ -32,9 +29,12 @@ function constructImgUrls(imageArray){
 		var url = "https://farm"+farm+".staticflickr.com/"+server_id+"/"+id+"_"+secret+"_c.jpg"
 		console.log(url);
 		$(".flickr-images").prepend($('<img>',{id:'theImg',src: url}))
+		$(".results-container").prepend($('<img>',{id:'theImg',src: url}))
+
 	}
 
 }
+
 
 
 // https://farm5.staticflickr.com/4784/25809291047_74492fac4d_m.jpg
