@@ -31,6 +31,11 @@ function rendorFlickrData() {
     }
 }
 
+
+// https://farm5.staticflickr.com/4784/25809291047_74492fac4d_m.jpg
+
+// https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)
+
 // Authentication
 // This method requires authentication with 'write' permission.
 
