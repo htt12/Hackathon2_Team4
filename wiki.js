@@ -10,7 +10,7 @@ function wikiApiCall(){
         console.log('success', data)
         var wikiResults = data[1];
         console.log(searchTerm)
-        flickrGetData(searchTerm);
+        // flickrGetData(searchTerm);
         renderResultsOnDom(wikiResults);
         }
 } );

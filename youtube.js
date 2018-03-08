@@ -17,14 +17,15 @@ function youtubeApiCall(){
 
 function displayVideo(data){
     var randomNumber = Math.floor((Math.random()*5))
-    var videoURL = 'https://www.youtube.com/embed/' + data.items[randomNumber]['id'].videoId;
-    var div = $('<div>');
+    var videoURL = 'https://www.youtube.com/embed/' + data.items[randomNumber]['id'].videoId +'?autoplay=1';
+    var div = $('<div>').attr('class', 'videoWrapper');
     var videoFrame = $('<iframe></iframe>').attr({
         'src': videoURL,
         'width': '700',
-        'height': '450',
+        'height': '400',
         'frameborder': '0',
-        'allowfullscreen':''
+        'allowfullscreen':'',
+        'class': 'youtubeIframe'
     });
 
     div.append(videoFrame);

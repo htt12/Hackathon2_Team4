@@ -21,7 +21,7 @@ function flickrGetData(searchTerm) {
 }
 
 function constructImgUrls(imageArray){
-	for (var i = 0; i<imageArray.length; i++){
+	for (var i = 0; i<1; i++){
 		var farm = imageArray[i].farm;
 		var id = imageArray[i].id;
 		var secret = imageArray[i].secret;
