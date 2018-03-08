@@ -9,8 +9,7 @@ function wikiApiCall(){
         success: function(data) {
         console.log('success', data)
         var wikiResults = data[1];
-        console.log(searchTerm)
-        flickrGetData(searchTerm);
+        console.log(searchTerm);
         renderResultsOnDom(wikiResults);
         }
 } );
@@ -23,7 +22,17 @@ function renderResultsOnDom(wikiResults){
         console.log(wikiResults[i]);
         // var image = getImageFromWiki(wikiResults[i]);
         // console.log(image);
-        var $resultDiv = $("<div>").text(wikiResults[i]).addClass("resultDiv");
+        var $resultDiv = $("<div>").text(wikiResults[i]).addClass("resultDiv").on("click", handleResultClick);
         $(".results-container").append($resultDiv);
+        
     }
+   
 };
+
+function handleResultClick(){
+    var searchTerm = $(this).text();
+    flickrGetData(searchTerm);
+    youtubeApiCall(searchTerm);
+    // getSearchInfo(searchTerm);
+
+}

@@ -1,9 +1,9 @@
 
 var youtube_apikey = "AIzaSyADtzYRgD6yRSIuqnOJtCmsnZ5nEd7x6i0";
 
-function youtubeApiCall(){
-    var qSearchTerm = $("#searchTerm").val();
-    var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q='+qSearchTerm+'&type=video&videoCaption=closedCaption&key='+youtube_apikey;
+
+function youtubeApiCall(searchTerm){
+    var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q='+searchTerm+'&type=video&videoCaption=closedCaption&key='+youtube_apikey;
     $.ajax({
         dataType: 'json',
         type: 'GET',
@@ -30,4 +30,6 @@ function displayVideo(data){
 
     div.append(videoFrame);
     $('.youtube-video').append(div);
+
+    console.log(videoURL);
 }
