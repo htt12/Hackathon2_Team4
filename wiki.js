@@ -19,20 +19,6 @@ function wikiApiCall(){
 
 }
 
-function getImageFromFlickr(imageName){
-    console.log("wiki image call");
-    var image = "http://en.wikipedia.org/w/api.php?action=query&titles="+imageName+"&prop=pageimages&format=json&pithumbsize=400"
-    $.ajax( {
-        url: image,
-        dataType: 'json',
-        type: 'GET',
-        headers: { 'Api-User-Agent': 'Example/1.0' },
-        success: function(data) {
-        console.log('success', data)
-        }
-} );
-
-}
 
 function renderResultsOnDom(wikiResults){
     for(var i = 0; i < wikiResults.length; i++){
