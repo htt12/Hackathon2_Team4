@@ -5,31 +5,25 @@ function flickrGetData() {
 			}
 
 			$.ajax({
-				url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=de5b41195f5a819dbb4c302754acc09e&in_gallery=skydiving&per_page=25&format=json&nojsoncallback=1&auth_token=72157693478317314-d23e0f5d420d477f&api_sig=9d14fd4ae7a5dc9df24f7e634b20663d',
+				url: 'https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=c7e4ee0c9678f51208abad8748d3d47d&user_id=29096781@N02&per_page=12&page=4&format=json&jsoncallback=?', 
 				data: 'json',
 				method: 'get',
-				success: function(response) {
-					console.log('Was it a sucess', response);
-					console.log(response);
-					console.log(response.data)
-					
+				success: function(data) {
+					console.log('Was it a sucess', data);
+					var imgData = data;
+					var imageArray = imgData.photos;
+					console.log(imageArray);
+					var photoURL = 'http://farm' + data.photos.photo.farm + '.static.flickr.com/' + response.photos.server + '/' + response.photos.id + '_' + response.photos.secret + '_m.jpg';
+					console.log(photoURL)
 				},
-				 error: function(response) {
-				 	console.log('err- ', response);
-				}
 			})
 			}
 
 function rendorFlickrData() {
-    console.log('1) flickr Get Data');
-    var ajaxConfig = {
-        dataType: 'json',
-        url:   ''
-        success: function(result) {
-            
-        }
-    }
+	// div.append(videoFrame);
+    // $('.video-container').append(div);
 }
+
 
 
 // https://farm5.staticflickr.com/4784/25809291047_74492fac4d_m.jpg
