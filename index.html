@@ -13,68 +13,13 @@
 </head>
 <header>Rush</header>
 <body>
-<<<<<<< HEAD
 
 
-	<script type="text/javascript">
 	
-
-		function flickrGetData() {
-			var dataObject = {
-				API_Key: 'c7e4ee0c9678f51208abad8748d3d47d',
-				secret: 'fd33ae9aad5ae660'
-			}
-
-			$.ajax({
-				url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=de5b41195f5a819dbb4c302754acc09e&tags=skydiving&per_page=25&format=json&nojsoncallback=1&auth_token=72157693478317314-d23e0f5d420d477f&api_sig=b926f41039f1839c6092b90814159be9',
-				type: 'get',
-				dataType: 'json',
-				tags: 'skydiving',
-				success: function(response) {
-					console.log('Was it a sucess', response);
-					console.log(response);
-				},
-				 error: function(response) {
-				 	console.log('err- ', response);
-				}
-			})
-
-		}
-		
-
-	</script>
-		<form role="search">
-		  <div>
-		    <input type="search" id="mySearch" name="q"
-		     placeholder="Search the site..."
-		     aria-label="Search through site content">
-		    <button>Search</button>
-		  </div>
-		</form>
-
-		<img id="photos">
-
-
-	<!-- Authentication
-This method requires authentication with 'write' permission.
-
-For details of how to obtain authentication tokens and how to sign calls, see the authentication api spec. Note that the 'photo' parameter should not be included in the signature. All other POST parameters should be included when generating the signature.
-
-Arguments
-photo
-The file to upload.
-photo_id
-The ID of the photo to replace.
-async (optional)
-Photos may be replaced in async mode, for applications that don't want to wait around for an upload to complete, leaving a socket connection open the whole time. Processing photos asynchronously is recommended. Please consult the documentation for details. -->
-<!-- Asynchronous Uploading
-Flickr can process photos in async mode, for applications that need to post multiple photos and don't want to wait around for each one to complete, leaving a socket connection open the whole time. -->
-    
-=======
         <div class="search-container">
                 <input type="text" id="searchTerm">
                 <button id="search" class="searchButton">Search</button>
         </div>
->>>>>>> e4adba0af78b506083b2ce40cf150e7d727c2d1b
+
 </body>
 </html>
