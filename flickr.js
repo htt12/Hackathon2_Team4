@@ -29,7 +29,7 @@ function constructImgUrls(imageArray){
 		var url = "https://farm"+farm+".staticflickr.com/"+server_id+"/"+id+"_"+secret+"_c.jpg"
 		console.log(url);
 		$(".results-container").prepend($('<img>',{id:'theImg',src: url}))
-		$(".image-container").append($('<img>',{id:'theImg',src: url}))
+		$(".flickr-images").append($('<img>',{id:'theImg',src: url}))
 	}
 
 }

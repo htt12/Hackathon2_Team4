@@ -28,5 +28,5 @@ function displayVideo(data){
     });
 
     div.append(videoFrame);
-    $('.video-container').append(div);
+    $('.youtube-video').append(div);
 }
