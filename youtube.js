@@ -3,7 +3,7 @@ var youtube_apikey = "AIzaSyADtzYRgD6yRSIuqnOJtCmsnZ5nEd7x6i0";
 
 function youtubeApiCall(){
     var qSearchTerm = $("#searchTerm").val();
-    var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q='+qSearchTerm+'&type=video&videoCaption=closedCaption&key='+youtube_apikey;
+    var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q='+qSearchTerm+'&type=video&videoCaption=closedCaption&key='+youtube_apikey;
     $.ajax({
         dataType: 'json',
         type: 'GET',
@@ -16,7 +16,7 @@ function youtubeApiCall(){
     })}
 
 function displayVideo(data){
-    var randomNumber = Math.floor((Math.random()*5))
+    var randomNumber = Math.floor((Math.random()*25));
     var videoURL = 'https://www.youtube.com/embed/' + data.items[randomNumber]['id'].videoId +'?autoplay=1';
     var div = $('<div>').attr('class', 'videoWrapper');
     var videoFrame = $('<iframe></iframe>').attr({

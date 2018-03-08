@@ -14,14 +14,14 @@ function flickrGetData(searchTerm) {
 					console.log(response);
 					var imageData = response;
 					var imageArray = imageData.photos.photo;
-					constructImgUrls(imageArray)
+					constructImgUrls(imageArray);
 					console.log(imageArray)
 				},
 			})
 }
 
 function constructImgUrls(imageArray){
-	for (var i = 0; i<1; i++){
+	for (var i = 0; i<imageArray.length; i++){
 		var farm = imageArray[i].farm;
 		var id = imageArray[i].id;
 		var secret = imageArray[i].secret;
