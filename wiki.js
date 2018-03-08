@@ -1,6 +1,6 @@
-function wikiApiCall(){
+function wikiApiCall(searchTerm){
     // var searchTerm = $("#searchTerm").val();
-    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=skydiving&format=json&callback=?";
+    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+searchTerm+"&format=json&callback=?";
     $.ajax( {
         url: url,
         dataType: 'json',
@@ -8,8 +8,9 @@ function wikiApiCall(){
         headers: { 'Api-User-Agent': 'Example/1.0' },
         success: function(data) {
         console.log('success', data)
-        var wikiResults = data[1];
-        renderResultsOnDom(wikiResults);
+        var wikiResults = data[2];
+        console.log(wikiResults[0])
+        renderWikiDescription(wikiResults, searchTerm);
         }
 } );
 
@@ -27,3 +28,11 @@ function renderResultsOnDom(){
     }
    
 };
+
+function renderWikiDescription(wikiResults, searchTerm){
+    console.log(searchTerm);
+    var wikiDescription = $("<div>").text(wikiResults).addClass("wiki-description");
+    var wikiTitle = $("<div>").text(searchTerm).addClass("wiki-title");
+    $(".wiki-content").append(wikiDescription);
+    $(".wiki-content").append(wikiTitle);
+}

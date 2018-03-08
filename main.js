@@ -16,6 +16,7 @@ function handleResultClick(){
     // flickrGetData(searchTerm);
     youtubeApiCall(searchTerm);
     getSearchInfo(searchTerm);
+    wikiApiCall(searchTerm);
     
     // getSearchInfo(searchTerm);
     $( ".results-container" ).fadeOut( 400 );
