@@ -25,6 +25,8 @@ function handleResultClick(){
 }
 
 function randomAdventure() {
+    $(".youtube-video").empty();
+    $(".wiki-content").empty();
     var searchTerm = activityArray[Math.floor((Math.random()*activityArray.length))];
     youtubeApiCall(searchTerm);
     getSearchInfo(searchTerm);

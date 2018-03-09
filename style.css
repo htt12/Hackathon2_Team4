@@ -3,7 +3,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10vh 90vh;
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     color:white;
     background-size: 100vw;
     margin: 0px;
@@ -20,7 +20,7 @@ header {
     background-color: rgb(250, 250, 236);
     color: rgb(59, 59, 59);
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.8vw;
     font-family: 'Aldrich', sans-serif;
 }
 
@@ -37,6 +37,7 @@ header {
 
 
 .resultDiv{
+    opacity: 0.5;
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: grid;
@@ -45,8 +46,12 @@ header {
     color: black;
     background-color: white;
     width: 30%;
+    height: 40%;
     font-size: 4vh;
     text-align: center;
+    background-image: url("images/familyfun.jpg");
+    background-size: 100%;
+
 }
 
 .bigTextBox{
@@ -117,9 +122,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
+    padding: 5px;
     position: absolute;
-    width: 50%;
+    width: 80%;
     text-align: center;
     grid-column: 1;
     grid-row: 2/3;
@@ -197,8 +202,11 @@ iframe{
     grid-row: 1/2;
     overflow: hidden;
     background-color: black;
-    /* border: 2px solid rgb(182, 0, 0); */
-    
+    overflow: scroll;
+}
+
+.wiki-content::-webkit-scrollbar{
+    display: none;
 }
 
 .wiki-description{
@@ -207,6 +215,7 @@ iframe{
     grid-row: 3/4;
     font-family: 'Fjalla One', sans-serif;
     padding: 1vw;
+    font-size: 3.5vh;
 }
 
 .wiki-title{
@@ -245,8 +254,8 @@ iframe{
     top: 1%;
     left: 1%;
     margin: 0;
-    --color: #300ccf;
-    --hover: #6ed1ef;
+    --color: #13cf0c;
+    --hover: #6eef6e;
   }
 
 .pulse:hover,
@@ -278,4 +287,18 @@ button {
     line-height: 1;
     margin: 0.5em;
     padding: 1em 2em;
+    z-index: 6;
   }
+
+  .titleBar {  
+    height: 35%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.536);
+    margin-top: 35%;
+    color: white;
+    font-family: 'Aldrich', sans-serif;  
+ }
+ 
+ .resultDiv:hover {
+   opacity: 1;
+ }
