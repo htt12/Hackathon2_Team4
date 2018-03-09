@@ -1,4 +1,5 @@
 function flickrGetData(searchTerm) {
+	debugger;
 	console.log(searchTerm);
 	var dataObject = {
 			API_Key: 'c7e4ee0c9678f51208abad8748d3d47d',

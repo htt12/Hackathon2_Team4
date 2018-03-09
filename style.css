@@ -2,6 +2,7 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
+
     grid-template-rows: 10vh 90vh;
     background-color: black;
     color:white;
@@ -51,7 +52,15 @@ header {
     text-align: center;
     background-image: url("images/familyfun.jpg");
     background-size: 100%;
+}
 
+.titleBar {
+    height: 35%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.536);
+    margin-top: 35%;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
 }
 
 .bigTextBox{
