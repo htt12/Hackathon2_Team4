@@ -1,47 +1,39 @@
+
 function flickrGetData(searchTerm) {
-	debugger;
-	console.log(searchTerm);
 	var dataObject = {
-			API_Key: 'c7e4ee0c9678f51208abad8748d3d47d',
-			secret: 'fd33ae9aad5ae660'
-			}
-
-			$.ajax({
-				url: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=30430025f066499dcebfbb48f6a50fc4&tags="+searchTerm+"&per_page=25&format=json&nojsoncallback=1",
-				dataType: 'json',
-				// method: 'get',
-				success: function(response) {
-					console.log('Was it a sucess', response);
-					console.log(response);
-					var imageData = response;
-					var imageArray = imageData.photos.photo;
-					constructImgUrls(imageArray);
-					console.log(imageArray)
-				},
-			})
-}
-
-function constructImgUrls(imageArray){
-	for (var i = 0; i<imageArray.length; i++){
-		var farm = imageArray[i].farm;
-		var id = imageArray[i].id;
-		var secret = imageArray[i].secret;
-		var server_id = imageArray[i].server;
-		var url = "https://farm"+farm+".staticflickr.com/"+server_id+"/"+id+"_"+secret+"_c.jpg"
-		console.log(url);
-		$(".flickr-images").prepend($('<img>',{id:'theImg',src: url}))
-		$(".results-container").prepend($('<img>',{id:'theImg',src: url}))
-
+		API_Key: 'c7e4ee0c9678f51208abad8748d3d47d',
+		secret: 'fd33ae9aad5ae660'
 	}
 
+	$.ajax({
+		url: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key="+dataObject.API_Key+"&tags="+searchTerm+"&per_page=25&format=json&nojsoncallback=1",
+		dataType: 'json',		
+		success: function(response) {
+			var flickrURL = constructImgUrls(response);
+			var img = $('<img>').addClass('flickr-image').attr('src', flickrURL);
+			var activitiesDiv = $("<div>").addClass("resultDiv");
+			var activitiesTitleBar = $("<div>").text(searchTerm).addClass("titleBar").on("click", handleResultClick);
+			
+			$(activitiesDiv).append(activitiesTitleBar, img);
+			$(".results-container").append(activitiesDiv);
+		}		
+	});
 }
 
 
-
-// https://farm5.staticflickr.com/4784/25809291047_74492fac4d_m.jpg
-
-// https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)
-
+function constructImgUrls(response){
+	var imageData = response;
+	var imageArray = imageData.photos.photo;
+	var randomNumber = Math.floor((Math.random()*24));
+	var randomImage = imageArray[randomNumber];
+	var farm = randomImage.farm;
+	var id = randomImage.id;
+	var secret = randomImage.secret;
+	var server_id = randomImage.server;
+	
+	return "https://farm"+farm+".staticflickr.com/"+server_id+"/"+id+"_"+secret+"_c.jpg";
+}	
+		
 // Authentication
 // This method requires authentication with 'write' permission.
 

@@ -1,8 +1,6 @@
 
-var youtube_apikey = "AIzaSyADtzYRgD6yRSIuqnOJtCmsnZ5nEd7x6i0";
-
-
 function youtubeApiCall(searchTerm){
+    var youtube_apikey = "AIzaSyADtzYRgD6yRSIuqnOJtCmsnZ5nEd7x6i0";
     var url = 'https://www.googleapis.com/youtube/v3/search'; //?part=snippet&maxResults=25&q='+searchTerm+'&type=video&videoCaption=closedCaption&key='+youtube_apikey;
     $.ajax({
         data: $.extend({
@@ -19,7 +17,9 @@ function youtubeApiCall(searchTerm){
             console.log('success for youtube', data)
             displayVideo(data);
         }
-    })}
+    });
+}
+
 
 function displayVideo(data){
     var randomNumber = Math.floor((Math.random()*5));
@@ -33,9 +33,6 @@ function displayVideo(data){
         'allowfullscreen':'',
         'class': 'youtubeIframe'
     });
-
     div.append(videoFrame);
     $('.youtube-video').append(div);
-
-    console.log(videoURL);
 }
